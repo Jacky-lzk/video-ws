@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--    import vue.js -->
+    <script src="jsmpeg.min.js"></script>
+    <script>
+        function load() {
+            let canvas = document.getElementById('video-canvas');
+            const player = new JSMpeg.Player(
+                "ws://192.168.150.20:8001/websocket",
+                {
+                    canvas: canvas,
+                    loop: false,
+                    autoplay: true,
+                    audio: false,
+                }
+            )
+        }
+
+        window.onload = load
+    </script>
+    <title>websocket demo</title>
+</head>
+<body>
+<canvas id="video-canvas"></canvas>
+</div>
+</body>
+</html>
